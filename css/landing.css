@@ -1,0 +1,24 @@
+.landing {
+  height: 100vh;
+  background-image: url(https://www.provet.cloud/hubfs/Veterinarian_hugs_dog.jpg);
+  background-size: cover;
+
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.message-landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: auto;
+  margin-right: 120px;
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  a, p {
+    font-size: 1.2rem;
+  }
+}

@@ -29,13 +29,14 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <link rel="stylesheet" href="/css/commons.css" />
+    <link rel="stylesheet" href="/css/landing.css" />
   </head>
   <body>
     <section class="root">
       <header>
         <nav class="navbar navbar-expand-lg bg-primary">
           <div class="container-fluid">
-            <a class="navbar-brand text-light" href="/index.html">TuVeteAr</a>
+            <a class="navbar-brand text-light">TuVeteAr</a>
             <button
               class="navbar-toggler"
               type="button"
@@ -50,12 +51,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a
-                    class="nav-link active text-light"
-                    aria-current="page"
-                    href="/index.html"
-                    >Agendar turno</a
-                  >
+                  <a class="nav-link disabled">Agendar turno</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link disabled" aria-disabled="true">Turnos</a>
@@ -66,9 +62,12 @@
         </nav>
       </header>
       <main>
-        <h1 class="text-center my-5">TURNOS AGENDADOS</h1>
-        <section class="container">
-          <div id="scheduled-appointments" class="row mb-5"></div>
+        <section class="landing">
+          <article class="message-landing">
+            <h1>Bienvenido a TuVeteAR</h1>
+            <a class="btn btn-primary mb-2" href="">Iniciar Sesión</a>
+            <p>¿Primera vez? Regístrate <a href="">aquí</a></p>
+          </article>
         </section>
       </main>
       <footer>

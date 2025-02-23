@@ -8,11 +8,11 @@ main {
   flex: 1;
 }
 
-.card{
+.card {
   min-width: 300px;
 }
 
-.card-img-top{
+.card-img-top {
   width: 80px;
   display: block;
   margin: auto;
