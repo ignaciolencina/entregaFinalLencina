@@ -56,7 +56,7 @@ fieldset {
   border-radius: 1rem;
   height: 3rem;
   color: #fff;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .login-btn:hover {
