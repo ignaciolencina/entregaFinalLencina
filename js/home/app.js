@@ -1,10 +1,15 @@
 import { Appointment } from "./Appointment.js";
+import { isLoggedIn } from "../utils.js";
 import {
   addAppointmentToLS,
   inputDateConfig,
   generateTimeOptions,
   disableOccupiedTimes,
 } from "./utils.js";
+
+if (!isLoggedIn()) {
+  window.location.replace('/pages/login.html');
+}
 
 inputDateConfig();
 generateTimeOptions();

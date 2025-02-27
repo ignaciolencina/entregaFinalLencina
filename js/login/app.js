@@ -1,3 +1,9 @@
+import { isLoggedIn } from "../utils.js";
+
+if (isLoggedIn()) {
+  window.location.replace("/pages/home.html");
+}
+
 const $email = document.getElementById("email-input");
 const $password = document.getElementById("password-input");
 const $form = document.getElementById("login-form");
@@ -17,8 +23,26 @@ $form.addEventListener("submit", async function (e) {
     );
 
     if (validUser) {
-      sessionStorage.setItem("isLoggedIn", email);
-      alert("Ola k ase");
+      sessionStorage.setItem("isLoggedIn", true);
+      sessionStorage.setItem(
+        "user",
+        JSON.stringify({
+          email: validUser.email,
+          id: validUser.id,
+        })
+      );
+
+      swal
+        .fire({
+          title: "Bienvenido!",
+          timer: 1500,
+          showCancelButton: false,
+          showConfirmButton: false,
+          timerProgressBar: true,
+        })
+        .then(() => {
+          window.location.assign("/pages/home.html");
+        });
     } else {
       alert("No so vo");
     }

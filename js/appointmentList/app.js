@@ -1,4 +1,9 @@
-import { getAppointmentsFromLS } from "../index/utils.js";
+import { getAppointmentsFromLS } from "../home/utils.js";
+import { isLoggedIn } from "../utils.js";
+
+if (!isLoggedIn()) {
+  window.location.replace('/pages/login.html');
+}
 
 const addAppointmentCard = (appointment) => {
   const $container = document.getElementById("scheduled-appointments");

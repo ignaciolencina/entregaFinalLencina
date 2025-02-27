@@ -8,13 +8,4 @@ main {
   flex: 1;
 }
 
-.card {
-  min-width: 300px;
-}
 
-.card-img-top {
-  width: 80px;
-  display: block;
-  margin: auto;
-  margin-top: 20px;
-}
