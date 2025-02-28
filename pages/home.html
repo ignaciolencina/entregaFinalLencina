@@ -20,15 +20,29 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <link rel="stylesheet" href="css/commons.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script
+      defer
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+
+    <link rel="stylesheet" href="/css/commons.css" />
   </head>
   <body>
     <section class="root">
@@ -50,10 +64,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a
-                    class="nav-link disabled"
-                    aria-disabled="true"
-                    href="#"
+                  <a class="nav-link disabled" aria-disabled="true" href="#"
                     >Agendar turno</a
                   >
                 </li>
@@ -70,119 +81,121 @@
         </nav>
       </header>
       <main>
-        <h1 class="text-center my-5">AGENDAR TURNO</h1>
-        <form id="form-appointments" class="m-5">
-          <div class="row">
-            <div class="col">
-              <fieldset class="mb-3">
-                <label for="input-type" class="form-label"
-                  >Tipo de Mascota</label
-                >
-                <select id="input-type" class="form-select">
-                  <option value="" disabled selected>
-                    Seleccione el tipo de mascota
-                  </option>
-                  <option value="Perro">Perro</option>
-                  <option value="Gato">Gato</option>
-                  <option value="Otro">Otro</option>
-                </select>
-              </fieldset>
-            </div>
-            <div class="col">
-              <fieldset class="mb-3">
-                <label for="input-petName" class="form-label"
-                  >Nombre Mascota</label
-                >
-                <input
-                  type="text"
-                  id="input-petName"
-                  class="form-control"
-                  placeholder="Toby"
-                />
-                <!-- <div class="invalid-feedback">
+        <section class="homeview">
+          <h1 class="text-center my-5">AGENDAR TURNO</h1>
+          <form id="form-appointments" class="m-5">
+            <div class="row">
+              <div class="col">
+                <fieldset class="mb-3">
+                  <label for="input-type" class="form-label"
+                    >Tipo de Mascota</label
+                  >
+                  <select id="input-type" class="form-select">
+                    <option value="" disabled selected>
+                      Seleccione el tipo de mascota
+                    </option>
+                    <option value="Perro">Perro</option>
+                    <option value="Gato">Gato</option>
+                    <option value="Otro">Otro</option>
+                  </select>
+                </fieldset>
+              </div>
+              <div class="col">
+                <fieldset class="mb-3">
+                  <label for="input-petName" class="form-label"
+                    >Nombre Mascota</label
+                  >
+                  <input
+                    type="text"
+                    id="input-petName"
+                    class="form-control"
+                    placeholder="Toby"
+                  />
+                  <!-- <div class="invalid-feedback">
                         <span class="badge text-bg-danger">Ingrese un nombre válido</span>
                     </div> -->
-              </fieldset>
+                </fieldset>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <fieldset class="mb-3">
-                <label for="input-ownerName" class="form-label"
-                  >Nombre del Dueño</label
-                >
-                <input
-                  type="text"
-                  id="input-ownerName"
-                  class="form-control"
-                  placeholder="Juan"
-                />
-                <!-- <div class="invalid-feedback">
+            <div class="row">
+              <div class="col">
+                <fieldset class="mb-3">
+                  <label for="input-ownerName" class="form-label"
+                    >Nombre del Dueño</label
+                  >
+                  <input
+                    type="text"
+                    id="input-ownerName"
+                    class="form-control"
+                    placeholder="Juan"
+                  />
+                  <!-- <div class="invalid-feedback">
               <span class="badge text-bg-danger">Ingrese un nombre válido</span>
             </div> -->
-              </fieldset>
-            </div>
-            <div class="col">
-              <fieldset class="mb-3">
-                <label for="input-phoneNumber" class="form-label"
-                  >Número de Teléfono</label
-                >
-                <input
-                  type="number"
-                  id="input-phoneNumber"
-                  class="form-control"
-                  placeholder="351 000 0000"
-                />
-                <!-- <div class="invalid-feedback">
+                </fieldset>
+              </div>
+              <div class="col">
+                <fieldset class="mb-3">
+                  <label for="input-phoneNumber" class="form-label"
+                    >Número de Teléfono</label
+                  >
+                  <input
+                    type="number"
+                    id="input-phoneNumber"
+                    class="form-control"
+                    placeholder="351 000 0000"
+                  />
+                  <!-- <div class="invalid-feedback">
                       <span class="badge text-bg-danger">Ingrese un nombre válido</span>
                     </div> -->
-              </fieldset>
+                </fieldset>
+              </div>
             </div>
-          </div>
-          <fieldset class="mb-3">
-            <label for="input-description" class="form-label"
-              >Descripción de Síntomas</label
-            >
-            <textarea
-              id="input-description"
-              class="form-control"
-              placeholder="Letargo, renguera, vómitos"
-            ></textarea>
-            <!-- <div class="invalid-feedback">
+            <fieldset class="mb-3">
+              <label for="input-description" class="form-label"
+                >Descripción de Síntomas</label
+              >
+              <textarea
+                id="input-description"
+                class="form-control"
+                placeholder="Letargo, renguera, vómitos"
+              ></textarea>
+              <!-- <div class="invalid-feedback">
               <span class="badge text-bg-danger"
                 >Ingrese una descripción válida</span
               >
             </div> -->
-          </fieldset>
-          <div class="row">
-            <div class="col">
-              <fieldset class="mb-3">
-                <label for="input-date" class="form-label">
-                  Seleccione la Fecha
-                </label>
-                <input type="date" id="input-date" class="form-control" />
-              </fieldset>
+            </fieldset>
+            <div class="row">
+              <div class="col">
+                <fieldset class="mb-3">
+                  <label for="input-date" class="form-label">
+                    Seleccione la Fecha
+                  </label>
+                  <input type="date" id="input-date" class="form-control" />
+                </fieldset>
+              </div>
+              <div class="col">
+                <fieldset class="mb-3">
+                  <label for="input-time" class="form-label"
+                    >Seleccione el Horario</label
+                  >
+                  <select id="input-time" class="form-select">
+                    <option value="" disabled selected>Elige un horario</option>
+                  </select>
+                </fieldset>
+              </div>
             </div>
-            <div class="col">
-              <fieldset class="mb-3">
-                <label for="input-time" class="form-label"
-                  >Seleccione el Horario</label
-                >
-                <select id="input-time" class="form-select">
-                  <option value="" disabled selected>Elige un horario</option>
-                </select>
-              </fieldset>
-            </div>
-          </div>
-          <!-- <fieldset class="mb-3">
+            <!-- <fieldset class="mb-3">
             <label for="input-categoria" class="form-label">Categoría</label>
             <select id="select-categorias" class="form-control">
             </select>
           </fieldset> -->
-          <div class="text-end">
-            <button type="submit" class="btn btn-primary">AGENDAR</button>
-          </div>
-        </form>
+            <div class="text-end">
+              <button type="submit" class="btn btn-primary">AGENDAR</button>
+            </div>
+          </form>
+        </section>
       </main>
       <footer>
         <section class="container-fluid bg-primary text-light">

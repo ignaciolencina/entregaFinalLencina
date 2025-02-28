@@ -7,6 +7,8 @@ if (isLoggedIn()) {
 const $email = document.getElementById("email-input");
 const $password = document.getElementById("password-input");
 const $form = document.getElementById("login-form");
+const $revealPassword = document.getElementById("reveal-password");
+const $passwordEye = document.getElementById("password-eye");
 
 $form.addEventListener("submit", async function (e) {
   e.preventDefault();
@@ -32,21 +34,39 @@ $form.addEventListener("submit", async function (e) {
         })
       );
 
-      swal
-        .fire({
-          title: "Bienvenido!",
-          timer: 1500,
-          showCancelButton: false,
-          showConfirmButton: false,
-          timerProgressBar: true,
-        })
-        .then(() => {
-          window.location.assign("/pages/home.html");
-        });
+      Toastify({
+        text: `Bienvenido ${validUser.firstname}!`,
+        className: "info",
+        position: "center",
+        style: {
+          background: "#0dcdfd",
+        },
+      }).showToast();
+
+      setTimeout(() => {
+        window.location.assign("/pages/home.html");
+      }, 2000);
     } else {
-      alert("No so vo");
+      Toastify({
+        text: `Credenciales incorrectas`,
+        className: "info",
+        position: "center",
+        style: {
+          background: "#FF0000",
+        },
+      }).showToast();
     }
   } catch (error) {
     console.error("Error:", error);
+  }
+});
+
+$revealPassword.addEventListener("click", () => {
+  if ($password.type === "password") {
+    $password.type = "text";
+    $passwordEye.classList = "bi bi-eye";
+  } else {
+    $password.type = "password";
+    $passwordEye.classList = "bi bi-eye-slash";
   }
 });
