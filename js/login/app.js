@@ -9,6 +9,7 @@ const $password = document.getElementById("password-input");
 const $form = document.getElementById("login-form");
 const $revealPassword = document.getElementById("reveal-password");
 const $passwordEye = document.getElementById("password-eye");
+const $loginBtn = document.getElementById("submit-btn");
 
 $form.addEventListener("submit", async function (e) {
   e.preventDefault();
@@ -70,3 +71,14 @@ $revealPassword.addEventListener("click", () => {
     $passwordEye.classList = "bi bi-eye-slash";
   }
 });
+
+const checkInputs = () => {
+  if ($email.value.trim() && $password.value.trim()) {
+    $loginBtn.disabled = false;
+  } else {
+    $loginBtn.disabled = true;
+  }
+};
+
+$email.addEventListener("input", checkInputs);
+$password.addEventListener("input", checkInputs);
