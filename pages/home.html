@@ -116,7 +116,7 @@
                   <label for="input-type" class="form-label"
                     >Tipo de Mascota</label
                   >
-                  <select id="input-type" class="form-select">
+                  <select id="input-type" class="form-select" required>
                     <option value="" disabled selected>
                       Seleccione el tipo de mascota
                     </option>
@@ -136,6 +136,8 @@
                     id="input-petName"
                     class="form-control"
                     placeholder="Toby"
+                    maxlength="30"
+                    required
                   />
                   <!-- <div class="invalid-feedback">
                         <span class="badge text-bg-danger">Ingrese un nombre válido</span>
@@ -154,6 +156,8 @@
                     id="input-ownerName"
                     class="form-control"
                     placeholder="Juan"
+                    maxlength="30"
+                    required
                   />
                   <!-- <div class="invalid-feedback">
               <span class="badge text-bg-danger">Ingrese un nombre válido</span>
@@ -170,6 +174,7 @@
                     id="input-phoneNumber"
                     class="form-control"
                     placeholder="351 000 0000"
+                    required
                   />
                   <!-- <div class="invalid-feedback">
                       <span class="badge text-bg-danger">Ingrese un nombre válido</span>
@@ -185,6 +190,9 @@
                 id="input-description"
                 class="form-control"
                 placeholder="Letargo, renguera, vómitos"
+                minlength="5"
+                maxlength="200"
+                required
               ></textarea>
               <!-- <div class="invalid-feedback">
               <span class="badge text-bg-danger"
@@ -198,7 +206,12 @@
                   <label for="input-date" class="form-label">
                     Seleccione la Fecha
                   </label>
-                  <input type="date" id="input-date" class="form-control" />
+                  <input
+                    type="date"
+                    id="input-date"
+                    class="form-control"
+                    required
+                  />
                 </fieldset>
               </div>
               <div class="col">
@@ -206,7 +219,7 @@
                   <label for="input-time" class="form-label"
                     >Seleccione el Horario</label
                   >
-                  <select id="input-time" class="form-select">
+                  <select id="input-time" class="form-select" required>
                     <option value="" disabled selected>Elige un horario</option>
                   </select>
                 </fieldset>
@@ -232,11 +245,13 @@
           </article>
           <article class="row text-center">
             <div class="col-12">
-              <a class="me-2 text-light" href="#"
+              <a class="me-2 text-light" href="./error404.html"
                 >Términos y Aviso de privacidad</a
               >
-              <a class="me-2 text-light" href="#">Envíanos tus comentarios</a>
-              <a class="text-light" href="#">Ayuda</a>
+              <a class="me-2 text-light" href="./error404.html"
+                >Envíanos tus comentarios</a
+              >
+              <a class="text-light" href="./error404.html">Ayuda</a>
             </div>
           </article>
           <article class="row text-center">

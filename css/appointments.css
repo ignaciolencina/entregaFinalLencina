@@ -8,3 +8,7 @@
   margin: auto;
   margin-top: 20px;
 }
+
+.noShow{
+  display: none;
+}

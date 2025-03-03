@@ -2,7 +2,7 @@ import { getAppointmentsFromLS } from "../home/utils.js";
 import { isLoggedIn } from "../utils.js";
 
 if (!isLoggedIn()) {
-  window.location.replace('/pages/login.html');
+  window.location.replace("/pages/login.html");
 }
 
 const addAppointmentCard = (appointment) => {
@@ -37,7 +37,7 @@ const addAppointmentCard = (appointment) => {
 
   const $title = document.createElement("h5");
   $title.classList.add("card-title", "text-center");
-  $title.textContent = `${appointment.petName} (${appointment.petType})`;
+  $title.textContent = `${appointment.petName}`;
 
   const $description = document.createElement("p");
   $description.classList.add("card-text");
@@ -74,6 +74,13 @@ const addAppointmentCard = (appointment) => {
 };
 
 const appointments = getAppointmentsFromLS();
+console.log(appointments)
+
+const $noAppointment = document.getElementById("no-appointment");
+
+if (appointments.length === 0){
+  $noAppointment.classList.remove ("noShow")
+}
 
 appointments.sort((a, b) => {
   const dateA = new Date(`${a.date} ${a.time}`);

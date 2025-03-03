@@ -1,0 +1,25 @@
+.e404 {
+  height: 100vh;
+  background-image: url(https://diamondpet.storage.googleapis.com/wp-content/uploads/2023/07/24162627/brown-chihuahua-standing-in-grass-071723.jpg);
+  background-size: cover;
+
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.message-404 {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: auto;
+  margin-right: 120px;
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+}
